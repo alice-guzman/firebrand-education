@@ -685,7 +685,11 @@ blockquote.isBlockQuote.hasNoQuotationMark{
 	font-family:Arial;
 	font-size:19px;
 	padding:12px 37px;
-	text-decoration:none;
 	text-shadow:0px 1px 0px #283966;
 }
 
+.myButton a {
+  font-weight: bold;
+  font-style: normal;
+  text-decoration:none !important;
+}
