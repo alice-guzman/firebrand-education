@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Review the Dimensions</title>
+<style>
+body { max-width:800px; max-height:600px; font-family: Verdana, sans-serif; color:#333333;}
+header h2 { margin-bottom:-10px; font-family: Georgia, serif; font-style: italic; color: #006187;}
+#matching-exercise { width:100%; height:100%; background-color:#C5D1D5; border-radius:15px; }
+.listItems { padding:5px; }
+.listItems ul { list-style:none; font-size:11px; list-style-type:none; padding:0; }
+.listItems ul li { margin:25px 5px; }
+.listItems ul li select { float:right; clear:both; }
+.buttons { clear:left; text-align: center; margin: 20px;}
+input[type=button], input[type=reset] {
+    border:0;
+    border-radius:10px;
+    cursor:pointer;
+    width: 100px;
+    height:35px;
+    color:white;
+    font-family: Georgia;
+    font-style: italic;
+    background: #006187;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #1790BF 1%, #006187 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #1790BF), color-stop(100%, #006187));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #1790BF 1%, #006187 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #1790BF 1%, #006187 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #1790BF 1%, #006187 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #1790BF 1%, #006187 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1790BF', endColorstr='#006187', GradientType=0);
+    /* IE6-9 */
+}
+input[disabled] {background:#999999;cursor:not-allowed;}
+.correct {border:2px solid green;}
+.incorrect {border:2px solid red;}
+</style>
+</head>
+
+<body>
+<form id="matching-exercise">
+
+    <div class="listItems">
+      <ul>
+      	<li>
+      	  <label for="listItem1">Physical sexual characteristics</label>
+          <select name="listItem1" id="listItem1">      
+          	<option value="">Select a dimension...</option>
+          	<option value="correct">Biological</option>
+            <option value="psychological">Psychological</option>
+            <option value="sociocultural">Sociocultural</option>
+          </select>
+      	</li>
+      	<li>
+      	  <label for="listItem2">Music, television, magazines, and other media</label>
+          <select name="listItem2" id="listItem2">      
+          	<option value="">Select a dimension...</option>
+          	<option value="biological">Biological</option>
+            <option value="psychological">Psychological</option>
+            <option value="correct">Sociocultural</option>
+          </select>
+      	</li>
+      	<li>
+      	  <label for="listItem3">Body self-image</label>
+          <select name="listItem3" id="listItem3">      
+          	<option value="">Select a dimension...</option>
+          	<option value="biological">Biological</option>
+            <option value="correct">Psychological</option>
+            <option value="sociocultural">Sociocultural</option>
+          </select>
+      	</li>
+      	<li>
+      	  <label for="listItem4">Reproduction and fertility</label>
+          <select name="listItem4" id="listItem4">      
+          	<option value="">Select a dimension...</option>
+          	<option value="correct">Biological</option>
+            <option value="psychological">Psychological</option>
+            <option value="sociocultural">Sociocultural</option>
+          </select>
+      	</li>
+      	<li>
+      	  <label for="listItem5">Socioeconomic status</label>
+          <select name="listItem5" id="listItem5">      
+          	<option value="">Select a dimension...</option>
+          	<option value="biological">Biological</option>
+            <option value="psychological">Psychological</option>
+            <option value="correct">Sociocultural</option>
+          </select>
+      	</li>
+      	<li>
+      	  <label for="listItem6">Learned responses to sex (e.g., positive or negative)</label>
+          <select name="listItem6" id="listItem6">      
+          	<option value="">Select a dimension...</option>
+          	<option value="biological">Biological</option>
+            <option value="correct">Psychological</option>
+            <option value="sociocultural">Sociocultural</option>
+          </select>
+      	</li>
+      	<li>
+      	  <label for="listItem7">Religion's influence on sexual beliefs</label>
+          <select name="listItem7" id="listItem7">      
+          	<option value="">Select a dimension...</option>
+          	<option value="biological">Biological</option>
+            <option value="psychological">Psychological</option>
+            <option value="correct">Sociocultural</option>
+          </select>
+      	</li>
+      	<li>
+      	  <label for="listItem8">Attitudes and feelings about sex</label>
+          <select name="listItem8" id="listItem8">      
+          	<option value="">Select a dimension...</option>
+          	<option value="biological">Biological</option>
+            <option value="correct">Psychological</option>
+            <option value="sociocultural">Sociocultural</option>
+          </select>
+      	</li>
+      	<li>
+      	  <label for="listItem9">Response to sexual stimulation</label>
+          <select name="listItem9" id="listItem9">      
+          	<option value="">Select a dimension...</option>
+          	<option value="correct">Biological</option>
+            <option value="psychological">Psychological</option>
+            <option value="sociocultural">Sociocultural</option>
+          </select>
+      	</li>
+      </ul>
+    </div>
+    
+    <div class="buttons">
+      <input type="button" name="submit" id="submit" value="Submit" disabled>
+      <input type="reset" name="reset" id="reset" value="Reset">
+    </div>
+</form>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
+<script>
+
+    //ENABLE SUBMIT BUTTON WHEN COMPLETE
+    $('.listItems ul li select').change(function() {
+        var empty = false;
+        $('.listItems ul li select').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+        if (empty) {
+            $('#submit').attr('disabled', 'disabled'); 
+        } else {
+            $('#submit').removeAttr('disabled');
+        }
+    });
+
+
+    
+    //SUBMIT FUNCTION
+    function  submit() {
+        //1
+        $(".listItems ul li select option:selected").each(function(){
+            var answer = $(this).val();
+            //var label = $("label[for='" + $(this).parent().attr('id') + "']");
+            //console.log(label);
+            if (answer === 'correct') {
+                $(this).parent().addClass('correct');
+                $("label[for='" + $(this).parent().attr('id') + "']").append('<em style="color:green;">-correct</em>');
+            } else {
+                $(this).parent().addClass('incorrect');
+                $("label[for='" + $(this).parent().attr('id') + "']").append('<em style="color:red;">-incorrect</em>');
+            }
+        });
+    }
+    
+    $("#submit").click(function(){
+        submit();
+		$('#reset').val('Try Again');
+        this.disabled = true;
+    });
+    
+
+
+
+    //RESET FUNCTION
+    $("#reset").click(function(){location.reload();});
+    
+
+
+
+</script>
+</body>
+</html>
