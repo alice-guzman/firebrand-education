@@ -689,6 +689,7 @@ blockquote.isBlockQuote.hasNoQuotationMark{
 }
 
 .myButton a {
+  color: white;
   font-weight: bold;
   font-style: normal;
   text-decoration:none !important;
