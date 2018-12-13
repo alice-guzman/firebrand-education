@@ -79,7 +79,7 @@
 
   <section class="white">
 	<div class="iframe-container">
-    	<a name="main_content"><iframe src="human-papilloma-virus.html" id="main_frame" scrolling="auto" frameborder="0" name="main_frame"></iframe></a>
+    	<a id="main_content" tabindex="-1"><iframe src="human-papilloma-virus.html" id="main_frame" scrolling="auto" frameborder="0" name="main_frame"></iframe></a>
     </div>
 
     
@@ -93,6 +93,11 @@
   <script src="../../_lib/js/elf-core-v2.min.js"></script>
   <script src="../../_lib/js/elf-kc.js"></script>
   <script>
+
+    $('.principalMenuReadings').click(function() {
+      $('#main_content').focus();
+    })
+
   </script>
 
 </body>
